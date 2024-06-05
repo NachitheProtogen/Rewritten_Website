@@ -1,0 +1,35 @@
+.intro {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    margin: auto;
+    background-color: #333;
+    border-radius: 20px;
+    padding: 20px; /* Optional: adds some padding inside the container */
+    width: fit-content; /* Adjust width to content */
+}
+
+.introImg {
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.introText {
+    color: greenyellow;
+    font-size: 1.2em; /* Optional: adjust font size */
+    margin: 0; /* Remove default margin */
+}
+.containerLeft {
+    position: relative;
+    float: left;
+}
+
+.container {
+    inherits: true;
+    text-align: center;
+}
+
+.containerRight {
+    position: relative;
+    float: right;
+}

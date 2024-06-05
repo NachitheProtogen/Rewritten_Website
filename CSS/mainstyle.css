@@ -12,19 +12,33 @@
     margin-left: auto;
     margin-right: auto;
     color: white;
+    cursor: pointer;
 }
 
 .border {
-    
+    margin: 0cm;
+    background-color: white;
+}
+
+.mainHTMLiframe {
+    text-align: center;
+    display: flex;
+    margin: auto;
+    transform: 0.5s;
 }
 
 .footer {
     text-align: center;
     display: flex;
+    margin: 20px;
+    position: relative;
+    bottom: 0;
     background-color: #333;
 }
 
 .footerText {
     text-align: center;
+    display: flex;
+    margin-left: 20px;
     color: white;
 }
