@@ -4,8 +4,13 @@ function GenerateFooter() {
     let footer = document.createElement("footer");
     footer.style.backgroundColor = "#333";
     footer.style.borderRadius = "20px";
-    
-    document.appendChild(footer);
+    footer.style.padding = "20px";
+    footer.style.marginTop = "20px";
+
+    let footerDiv = document.createElement("div");
+    footerDiv.className = "footer";
+
+    footer.appendChild(footerDiv);
     
     let links = [
         { id: "Youtube", icon: "fab fa-youtube", href: "https://www.youtube.com/channel/UC_ey0FNtdHaFJCQjSqN-wLQ", text: "Youtube" },
@@ -14,24 +19,25 @@ function GenerateFooter() {
         { id: "Twitter", icon: "fab fa-twitter", href: "https://twitter.com/Musicprotogen", text: "Twitter" },
         { id: "Discord", icon: "fab fa-discord", href: "https://discord.com/users/324313743796207641", text: "Discord" },
         { id: "Steam", icon: "fab fa-steam", href: "https://steamcommunity.com/id/Nanachi_OwO/", text: "Steam"},
-        { id: "Home", icon: "fas fa-home", href: "index.html", text: "Home" }, 
-      ];
+    ];
 
     links.forEach(function (linkInfo) {
         let link = document.createElement("p");
         link.className = "footerText";
         link.id = linkInfo.id;
-        link.innerHTML = '<a href="' + linkInfo.href + '" ><i class="' + linkInfo.icon + '"></i> ' + linkInfo.text + '</a>';
-        footer.appendChild(link);
+        link.innerHTML = '<a href="' + linkInfo.href + '" style="color: white;"><i class="' + linkInfo.icon + '"></i> ' + linkInfo.text + '</a>';
+        footerDiv.appendChild(link);
     });
 
     let mail = document.createElement("p");
     mail.style.textAlign = "right";
     mail.style.paddingRight = "20px";
     mail.style.color = "white";
-    mail.innerHTML = 'You can send me feeback under: <a href="mailto: shadownachi.website@gmail.com">shadownachi.website@gmail.com</a>';
+    mail.innerHTML = 'You can send me feedback under: <a href="mailto:shadownachi.website@gmail.com" style="color: white;">shadownachi.website@gmail.com</a>';
 
     footer.appendChild(mail);
+
+    document.body.appendChild(footer);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
