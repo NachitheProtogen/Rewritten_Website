@@ -40,6 +40,8 @@ function GenerateFooter() {
     document.body.appendChild(footer);
 }
 
+
+
 document.addEventListener("DOMContentLoaded", () => {
     GenerateFooter();
 });

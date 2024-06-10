@@ -1,3 +1,12 @@
+body {
+    background-color: #333;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings:
+    "wdth" 100;
+}
+
 .intro {
     display: flex;
     flex-direction: column; 
@@ -26,15 +35,25 @@
 }
 
 .container {
-    inherits: true;
     text-align: center;
-    display: flex;
+    display: block;
     margin: auto;
     width: 50%;
 }
 
 .containerRight {
+    text-align: right;
     position: relative;
+    display: block;
     float: right;
     width: 50%;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .containerLeft, .containerRight {
+        width: 100%;
+        padding: 0;
+    }
 }
