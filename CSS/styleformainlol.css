@@ -49,7 +49,11 @@ body {
     width: 50%;
 }
 
-
+.image {
+    text-align: center;
+    display: block;
+    margin: auto;
+}
 
 @media screen and (max-width: 800px) {
     .containerLeft, .containerRight {
