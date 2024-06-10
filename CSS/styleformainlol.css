@@ -1,35 +1,40 @@
 .intro {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center children horizontally */
-    justify-content: center; /* Center children vertically */
+    flex-direction: column; 
+    align-items: center;  
+    justify-content: center;  
     margin: auto;
     background-color: #333;
     border-radius: 20px;
-    padding: 20px; /* Optional: adds some padding inside the container */
-    width: fit-content; /* Adjust width to content */
+    padding: 20px;  
+    width: fit-content; 
 }
 
 .introImg {
-    margin-bottom: 10px; /* Space between image and text */
+    margin-bottom: 10px; 
 }
 
 .introText {
-    color: greenyellow;
-    font-size: 1.2em; /* Optional: adjust font size */
-    margin: 0; /* Remove default margin */
+    color: greenyellow ;
+    font-size: 1.2em;  
+    margin: 0
 }
 .containerLeft {
     position: relative;
     float: left;
+    width: 50%;
 }
 
 .container {
     inherits: true;
     text-align: center;
+    display: flex;
+    margin: auto;
+    width: 50%;
 }
 
 .containerRight {
     position: relative;
     float: right;
+    width: 50%;
 }
