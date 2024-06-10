@@ -1,0 +1,35 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings:
+    "wdth" 100;
+}
+
+.containerLeft {
+    position: relative;
+    float: left;
+    width: 50%;
+    background-color: #333;
+    border-radius: 20px;
+}
+
+.container {
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 50%;
+    background-color: #333;
+    border-radius: 20px;
+}
+
+.containerRight {
+    text-align: right;
+    position: relative;
+    display: block;
+    float: right;
+    width: 50%;
+    background-color: #333;
+    border-radius: 20px;
+}
