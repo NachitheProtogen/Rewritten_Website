@@ -40,8 +40,6 @@ function GenerateFooter() {
     document.body.appendChild(footer);
 }
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
     GenerateFooter();
 });
@@ -57,3 +55,7 @@ art.addEventListener("click", () => {
 apps.addEventListener("click", () => {
     main.setAttribute("src", "HTML/programms.html");
 })
+
+$(blog).click(function () { 
+    $(main).attr("src", "HTML/blog.html");
+});
