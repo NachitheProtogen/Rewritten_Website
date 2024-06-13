@@ -1,8 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-variation-settings:
     "wdth" 100;
+}
+
+body, html {
+    height: 100%;
+}
+
+.bg-img {
+    background-image: url("../IMG/Nachi_Neon_City.png");
+    filter: blur(10px);
+    top:-10px;
+    left: -10px;
+    height: 105%;
+    width: 105%;
+    position: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
 }
 
 .header {

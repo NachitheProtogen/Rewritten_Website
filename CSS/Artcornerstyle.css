@@ -5,16 +5,19 @@
 
 .container {
     text-align: center;
-    padding: 20px;
-    margin: auto;
+    padding: 30px;
+    margin: 20px;
     display: inline-block;
     background-color: #333;
     border-radius: 20px;
 }
 
-#artdiv {
+#singleartdiv {
     align-items: center;
-    display: flex;
+}
+
+#colectionartdiv {
+
 }
 
 .intro {

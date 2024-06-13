@@ -1,35 +1,19 @@
-function CreateSingle() { //Creates a single frame for an Artpiece
-    const images = [
-        
-    ];
-    images.forEach(image => {
-        let pic = document.createElement("img");
-        let des = document.createElement("p");
-        let frame = document.createElement("div");
-
-        pic.src = image.file;
-        pic.width = image.width;
-        
-        des.innerHTML = `This was created by <a href="${image.credit}">${image.artist}</a>!`;
-        
-        frame.className = "container";
-
-        artdiv.appendChild(frame);
-        frame.appendChild(pic);
-        frame.appendChild(des);
-    });
+async function loadArt() {
+    try {
+        const response = await fetch("../JSON/Art.json");
+        const images = await response.json();
+        displayImages(images);
+    } catch (error) {
+        console.log("Error loading images:", error);
+    }
 }
 
-function createColection() { //Creates a Collection of Images in a single frame
-    const images = [
-        {file: "../IMG/2_-_proto_png.png", width: "200", artist: "Idrael", credit: "https://idrael.carrd.co"},
-        {file: "../IMG/30.12_-_shadow_nachi_animation.gif", width: "200", artist: "Kir0nixx_", credit: "https://x.com/Kir0nixx_"},
-        {file: "../IMG/06.12_-_shadow_nachi_ref.png", width: "200", artist: "Kir0nixx_", credit: "https://x.com/Kir0nixx_"},
-    ]
+function displayImages(images) {
+    const singleArtDiv = document.getElementById('singleartdiv');
+    const collectionArtDiv = document.getElementById('colectionartdiv');
 
     const groupedByArtist = {};
 
-    // Group images by artist
     images.forEach(image => {
         if (!groupedByArtist[image.artist]) {
             groupedByArtist[image.artist] = {
@@ -37,8 +21,9 @@ function createColection() { //Creates a Collection of Images in a single frame
                 images: []
             };
         }
-        groupedByArtist[image.artist].images.push(image.file);
+        groupedByArtist[image.artist].images.push(image);
     });
+
     for (const artist in groupedByArtist) {
         const artistInfo = groupedByArtist[artist];
 
@@ -56,11 +41,8 @@ function createColection() { //Creates a Collection of Images in a single frame
         des.innerHTML = `This was created by <a href="${artistInfo.credit}">${artist}</a>!`;
         frame.appendChild(des);
 
-        artdiv.appendChild(frame);
+        collectionArtDiv.appendChild(frame);
     }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    CreateSingle();
-    createColection();
-})
+loadArt();
