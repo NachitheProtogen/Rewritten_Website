@@ -12,12 +12,9 @@
     border-radius: 20px;
 }
 
-#singleartdiv {
-    align-items: center;
-}
-
 #colectionartdiv {
-
+    display: inline-block;
+    text-align: center;
 }
 
 .intro {

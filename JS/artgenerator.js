@@ -9,7 +9,6 @@ async function loadArt() {
 }
 
 function displayImages(images) {
-    const singleArtDiv = document.getElementById('singleartdiv');
     const collectionArtDiv = document.getElementById('colectionartdiv');
 
     const groupedByArtist = {};
