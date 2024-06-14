@@ -47,7 +47,7 @@ function generateHeader() {
     let headers = [
         {id: "blog", icon: "fa fa-file-lines", name: "Blog", href: "HTML/blog.html"},
         {id: "art", icon: "fa fa-brush", name: "Artcorner", href: "HTML/artcorner.html"},
-        {id: "home", icon: "fa fa-home", name: "Home", href: "index.html"},
+        {id: "home", icon: "fa fa-home", name: "Home", href: "HTML/main.html"},
         {id: "apps", icon: "fa fa-terminal", name: "Applications", href: "HTML/programms.html"},
     ];
 
