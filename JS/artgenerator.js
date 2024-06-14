@@ -37,7 +37,7 @@ function displayImages(images) {
         });
 
         let des = document.createElement("p");
-        des.innerHTML = `This was created by <a href="${artistInfo.credit}">${artist}</a>!`;
+        des.innerHTML = `This was created by <a target="blank_" href="${artistInfo.credit}">${artist}</a>!`;
         frame.appendChild(des);
 
         collectionArtDiv.appendChild(frame);

@@ -1,6 +1,6 @@
 let main = document.getElementById("mainframe")
 
-function GenerateFooter() {
+function generateFooter() {
     let footer = document.createElement("footer");
     footer.style.backgroundColor = "#333";
     footer.style.borderRadius = "20px";
@@ -40,22 +40,33 @@ function GenerateFooter() {
     document.body.appendChild(footer);
 }
 
+function generateHeader() {
+    let header = document.createElement("header");
+    header.className="header";
+
+    let headers = [
+        {id: "blog", icon: "fa fa-file-lines", name: "Blog", href: "HTML/blog.html"},
+        {id: "art", icon: "fa fa-brush", name: "Artcorner", href: "HTML/artcorner.html"},
+        {id: "home", icon: "fa fa-home", name: "Home", href: "index.html"},
+        {id: "apps", icon: "fa fa-terminal", name: "Applications", href: "HTML/programms.html"},
+    ];
+
+    headers.forEach(e => {
+        let p = document.createElement("p");
+        p.id = e.id;
+        p.className = "headerText";
+        p.innerHTML = `<i class="${e.icon}"></i><br>${e.name}`;
+        p.addEventListener("click", () => {
+            $(main).attr("src", `${e.href}`);
+        });
+
+        header.appendChild(p);
+    })
+
+    document.body.insertBefore(header, main);
+};
+
 document.addEventListener("DOMContentLoaded", () => {
-    GenerateFooter();
-});
-
-home.addEventListener("click", () => {
-    main.setAttribute("src", "HTML/main.html");
-})
-
-art.addEventListener("click", () => {
-    main.setAttribute("src", "HTML/artcorner.html");
-})
-
-apps.addEventListener("click", () => {
-    main.setAttribute("src", "HTML/programms.html");
-})
-
-$(blog).click(function () { 
-    $(main).attr("src", "HTML/blog.html");
+    generateHeader();
+    generateFooter();
 });
