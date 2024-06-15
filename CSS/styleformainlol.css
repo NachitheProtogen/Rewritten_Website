@@ -12,6 +12,7 @@ body {
     align-items: center;  
     justify-content: center;  
     margin: auto;
+    margin-bottom: 20px;
     background-color: #333;
     border-radius: 20px;
     padding: 20px;  
@@ -30,7 +31,9 @@ body {
 .containerLeft {
     position: relative;
     float: left;
-    width: 50%;
+    width: calc(50% - 20px);
+    padding: 20px;
+    margin-bottom: 20px;
     background-color: #333;
     border-radius: 20px;
 }
@@ -39,7 +42,9 @@ body {
     text-align: center;
     display: block;
     margin: auto;
-    width: 50%;
+    width: calc(50% - 20px);
+    padding: 20px;
+    margin-bottom: 20px;
     background-color: #333;
     border-radius: 20px;
 }
@@ -49,7 +54,9 @@ body {
     position: relative;
     display: block;
     float: right;
-    width: 50%;
+    width: calc(50% - 20px);
+    padding: 20px;
+    margin-bottom: 20px;
     background-color: #333;
     border-radius: 20px;
 }
@@ -62,7 +69,7 @@ body {
 
 @media screen and (max-width: 800px) {
     .containerLeft, .containerRight {
-        width: 100%;
-        padding: 0;
+        width: calc(95% - 20px);
+        padding: 20px;
     }
 }
