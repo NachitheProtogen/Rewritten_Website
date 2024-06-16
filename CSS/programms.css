@@ -1,5 +1,4 @@
 body {
-    background-color: black;
     color: white;
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
@@ -10,16 +9,25 @@ body {
 .containerLeft {
     position: relative;
     float: left;
-    width: 50%;
+    width: calc(50% - 20px);
+    padding: 20px;
+    margin-top: 20px;
     background-color: #333;
     border-radius: 20px;
+}
+
+#paint {
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 .container {
     text-align: center;
     display: block;
     margin: auto;
-    width: 50%;
+    width: calc(50% - 20px);
+    padding: 20px;
+    margin-top: 20px;
     background-color: #333;
     border-radius: 20px;
 }
@@ -29,7 +37,9 @@ body {
     position: relative;
     display: block;
     float: right;
-    width: 50%;
+    width: calc(50% - 20px);
+    padding: 20px;
+    margin-top: 20px;
     background-color: #333;
     border-radius: 20px;
 }

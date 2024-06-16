@@ -46,9 +46,10 @@ function generateHeader() {
 
     let headers = [
         {id: "blog", icon: "fa fa-file-lines", name: "Blog", href: "HTML/blog.html"},
-        {id: "art", icon: "fa fa-brush", name: "Artcorner", href: "HTML/artcorner.html"},
+        {id: "art", icon: "fa fa-brush", name: "Art", href: "HTML/artcorner.html"},
         {id: "home", icon: "fa fa-home", name: "Home", href: "HTML/main.html"},
-        {id: "apps", icon: "fa fa-terminal", name: "Applications", href: "HTML/programms.html"},
+        {id: "apps", icon: "fa fa-terminal", name: "Apps", href: "HTML/programms.html"},
+        {id: "hobbies", icon: "fa fa-bars", name: "Hobbies", href: "HTML/hobbies.html"}
     ];
 
     headers.forEach(e => {
@@ -69,4 +70,58 @@ function generateHeader() {
 document.addEventListener("DOMContentLoaded", () => {
     generateHeader();
     generateFooter();
+});
+
+function adjustIframeHeight(iframe, buffer = 20, minHeight = 900) {
+    const desiredHeight = iframe.contentWindow.document.body.scrollHeight + buffer;
+    const newHeight = Math.max(desiredHeight, minHeight); 
+
+    iframe.style.height = newHeight + 'px';
+}
+
+function waitForContentStabilization(iframe, callback, interval = 100, maxAttempts = 10) {
+    let lastHeight = 0;
+    let attempts = 0;
+
+    function checkHeight() {
+        const currentHeight = iframe.contentWindow.document.body.scrollHeight;
+
+        if (currentHeight !== lastHeight) {
+            lastHeight = currentHeight;
+            attempts = 0; // Reset attempts if height changes
+        } else {
+            attempts++;
+        }
+
+        if (attempts >= maxAttempts) {
+            callback();
+        } else {
+            setTimeout(checkHeight, interval);
+        }
+    }
+
+    checkHeight();
+}
+
+function setupMutationObserver(iframe) {
+    const observer = new MutationObserver(() => {
+        iframe.addEventListener('load', function onLoad() {
+            waitForContentStabilization(iframe, () => adjustIframeHeight(iframe));
+            iframe.removeEventListener('load', onLoad);
+        });
+    });
+
+    observer.observe(iframe, { attributes: true, attributeFilter: ['src'] });
+}
+
+$(document).ready(function() {
+    let main = document.getElementById('mainframe');
+
+    setupMutationObserver(main);
+
+    window.addEventListener('resize', function() {
+        waitForContentStabilization(main, () => adjustIframeHeight(main));
+    });
+
+    adjustIframeHeight(main);
 });

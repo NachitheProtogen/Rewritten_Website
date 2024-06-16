@@ -38,8 +38,7 @@ body, html {
 
 .headerText {
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     color: white;
     cursor: pointer;
 }
@@ -57,6 +56,8 @@ body, html {
     border-radius: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
+    border: none;
+    overflow: hidden;
 }
 
 .footer {
