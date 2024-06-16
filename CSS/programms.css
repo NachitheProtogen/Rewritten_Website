@@ -16,7 +16,7 @@ body {
     border-radius: 20px;
 }
 
-#paint {
+#paint,#life {
     transition: 0.5s;
     cursor: pointer;
 }
