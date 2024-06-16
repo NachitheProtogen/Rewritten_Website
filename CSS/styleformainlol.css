@@ -73,3 +73,10 @@ body {
         padding: 20px;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .containerLeft, .containerRight {
+        width: 98%;
+        padding: 10px;
+    }
+}

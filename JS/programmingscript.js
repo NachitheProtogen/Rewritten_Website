@@ -1,9 +1,9 @@
 let main = parent.document.getElementById("mainframe");
 
-paint.addEventListener("click", () => {
-    main.setAttribute("src", "legacy/HTML/art.html")
-})
-
-life.addEventListener("click", () => {
-    main.setAttribute("src", "legacy/HTML/life.html")
+$(art).click(function () { 
+    $(main).attr("src", "legacy/HTML/art.html");
 });
+
+$(life).click(function () { 
+    $(main).attr("src", "legacy/HTML/life.html")
+}); 
