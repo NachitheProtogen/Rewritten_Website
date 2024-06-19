@@ -1,6 +1,6 @@
 let main = parent.document.getElementById("mainframe");
 
-$(art).click(function () { 
+$(paint).click(function () { 
     $(main).attr("src", "legacy/HTML/art.html");
 });
 
