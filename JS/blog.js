@@ -11,6 +11,8 @@ async function loadblog() { //loads the blog json
 function nachiblogs(blogJson) { //loads the blogs onto the HTML
     const blogs = document.getElementsByClassName("colectiondiv");
 
+    blogJson.sort((a, b) => new Date(b.date) - new Date(a.date));
+
     blogJson.forEach(blog => {
         let container = document.createElement("div")
         container.className = "container";
