@@ -33,6 +33,12 @@ function displayImages(images) {
             let pic = document.createElement("img");
             pic.src = image.file;
             pic.width = image.width;
+            if (image.spoiler) {
+                pic.style.filter = "blur(25px)";
+                pic.addEventListener("click", () => {
+                    pic.style.filter = "none";
+                })
+            }
             frame.appendChild(pic);
         });
 
