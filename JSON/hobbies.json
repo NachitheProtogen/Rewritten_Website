@@ -1,8 +1,8 @@
 [
     {
-        "title": "test",
-        "description": "test",
-        "image": "",
-        "src": "../HTML/blog.html"
+        "title": "Nachi's Story",
+        "description": "[LEGACY UI]<br>The Story of my sona! Written when I was 17 <br>(I am dislexic so if there are spelling errors I'm sorry)",
+        "image": "../IMG/06.12_-_shadow_nachi_ref.png",
+        "src": "../legacy/HTML/story.html"
     }
 ]

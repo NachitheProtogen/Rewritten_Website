@@ -41,6 +41,11 @@ body, html {
     margin: auto;
     color: white;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.headerText:hover {
+    transform: translateY(-10px);
 }
 
 .border {
@@ -77,6 +82,11 @@ body, html {
     text-align: center;
     margin: 10px;
     color: white;
+    transition: 0.3s;
+}
+
+.footerText:hover {
+    transform: translateY(-10px);
 }
 
 @media (max-width: 600px) {

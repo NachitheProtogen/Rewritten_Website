@@ -3,25 +3,26 @@
     color: white;
 }
 
+.container {
+    text-align: center;
+    border-radius: 20px;
+    background-color: #333;
+    color: white;
+    padding: 30px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.colectiondiv {
+    display: inline-block;
+    text-align: center;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-variation-settings:
     "wdth" 100;
-}
-
-.container {
-    text-align: center;
-    padding: 30px;
-    margin: 20px;
-    display: inline-block;
-    background-color: #333;
-    border-radius: 20px;
-}
-
-#colectiondiv {
-    display: inline-block;
-    text-align: center;
 }
 
 .intro {
