@@ -16,9 +16,10 @@ function displayImages(images) {
     frame.className = "container";
 
     images.forEach(image => {
-            let pic = document.createElement("img");
-            pic.src = image.file;
-            pic.width = image.width;
+            let pic = document.createElement("a");
+            pic.target = "_blank"
+            pic.href = image.file
+            pic.innerHTML = `<img src= "${image.file}" width = "${image.width}">`
 
         frame.appendChild(pic);
     });
