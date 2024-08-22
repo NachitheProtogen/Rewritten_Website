@@ -36,7 +36,6 @@ function nachiblogs(blogJson) { //loads the blogs onto the HTML
             
             $(container).append(pictur);
         } else {
-            return;
         };
         $(container).append(content);
 
