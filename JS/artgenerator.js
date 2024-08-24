@@ -34,7 +34,7 @@ function displayImages(images) {
             pic.src = image.file;
             pic.width = image.width;
             if (image.spoiler) {
-                pic.style.filter = "blur(25px)";
+                pic.style.filter = "brightness(0%)";
                 pic.addEventListener("click", () => {
                     pic.style.filter = "none";
                 })
