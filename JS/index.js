@@ -35,7 +35,7 @@ function generateFooter() {
     mail.style.color = "white";
     mail.innerHTML = 'You can send me feedback under: <a href="mailto:nachi.website@gmail.com" style="color: white;">nachi.website@gmail.com</a>';
 
-    footer.appendChild(mail);
+    //footer.appendChild(mail);
 
     document.body.appendChild(footer);
 }
