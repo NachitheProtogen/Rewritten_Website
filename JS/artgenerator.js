@@ -33,13 +33,13 @@ function displayImages(images) {
             let pic = document.createElement("img");
             pic.src = image.file;
             pic.width = image.width;
-            if (image.spoiler) {
-                pic.style.filter = "brightness(0%)";
+            if (!image.spoiler) {
+                /*pic.style.filter = "brightness(0%)";
                 pic.addEventListener("click", () => {
                     pic.style.filter = "none";
-                })
+                    }) */
+               frame.appendChild(pic);
             }
-            frame.appendChild(pic);
         });
 
         let des = document.createElement("p");
